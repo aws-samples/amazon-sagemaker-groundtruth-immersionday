@@ -1,0 +1,31 @@
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+
+              <crowd-form>
+                  <crowd-classifier
+                    name="crowd-classifier"
+                    categories="{{ task.input.labels | to_json | escape }}"
+                    header="Please classify video"
+                  >
+                    <classification-target>
+                       <video width="100%" controls/>
+                        <source src="{{ task.input.taskObject | grant_read_access }}" type="video/mp4"/>
+                        <source src="{{ task.input.taskObject | grant_read_access }}" type="video/webm"/>
+                        <source src="{{ task.input.taskObject | grant_read_access }}" type="video/ogg"/>
+                      Your browser does not support the video tag.
+                      </video>
+                    </classification-target>
+                    <full-instructions header="Video classification instructions">
+                      <ol><li><strong>Read</strong> the task carefully and inspect the video.</li>
+                        <li><strong>Read</strong> the options and review the examples provided to understand more about the labels.</li>
+                        <li><strong>Choose</strong> the appropriate label that best suits the video.</li></ol>
+                    </full-instructions>
+                    <short-instructions>
+                      <h3><span style="color: rgb(0, 138, 0);">Good example</span></h3>
+                        <p>Enter description to explain the correct label to the workers</p>
+                        <p><img src="https://d7evko5405gb7.cloudfront.net/fe4fed9b-660c-4477-9294-2c66a15d6bbe/src/images/quick-instructions-example-placeholder.png" style="max-width:100%"></p>
+                        <h3><span style="color: rgb(230, 0, 0);">Bad example</span></h3>
+                        <p>Enter description of an incorrect label</p>
+                        <p><img src="https://d7evko5405gb7.cloudfront.net/fe4fed9b-660c-4477-9294-2c66a15d6bbe/src/images/quick-instructions-example-placeholder.png" style="max-width:100%"></p>
+                    </short-instructions>
+                  </crowd-classifier>
+              </crowd-form>
