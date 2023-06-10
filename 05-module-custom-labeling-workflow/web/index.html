@@ -1,0 +1,12 @@
+<head>
+    <script defer="defer" src="/static/js/main.059ee2ed.js"></script>
+    <link href="/static/css/main.a9619231.css" rel="stylesheet">
+</head>
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+<div id="document-text" style="display:none">{{ task.input.text }}</div>
+<div id="encodedImage" style="display:none">{{ task.input.textObject }}</div>
+<div id="metadata" style="display:none">{{ task.input.metadata }}</div><crowd-form><input name="annotations"
+        id="annotations" type="hidden"><crowd-button form-action="submit"
+        style="display:none"></crowd-button></crowd-form>
+<div id="root"></div><crowd-button id="submitButton">Submit</crowd-button>
+<script>document.querySelector("crowd-form").onsubmit = function () { document.getElementById("annotations").value = JSON.stringify(JSON.parse(document.querySelector("pre").innerText)) }, document.getElementById("submitButton").onclick = function () { document.querySelector("crowd-form").submit() }</script>
