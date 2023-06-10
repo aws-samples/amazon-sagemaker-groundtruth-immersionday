@@ -1,0 +1,1 @@
+{"source-ref":"s3://$BUCKET/artifacts/gt-point-cloud-demos/sequences/seq2.json","source-ref-metadata":{"json-paths":["number-of-frames","prefix","frames{frame-no, frame}"]}}

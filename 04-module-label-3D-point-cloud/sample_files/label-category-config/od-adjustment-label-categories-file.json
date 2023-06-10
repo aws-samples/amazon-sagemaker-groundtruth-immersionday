@@ -1,0 +1,33 @@
+{
+	"document-version": "2020-03-01",
+	"categoryGlobalAttributes": [
+        {
+            "name":"applyToAllCategory",
+            "description":"global attribute that applies to all label categories",
+            "type":"string",
+            "enum": ["foo", "buz", "buzz2"]
+        }
+    ],
+	"labels": [{
+				"label": "Car",
+				"attributes": [
+					{
+						"name": "color",
+						"type": "string",
+						"enum": ["Red", "Blue", "Silver"]
+					}
+				]
+			},
+			{
+				"label": "Pedestrian",
+				"attributes": [{
+					"name": "occlusion",
+					"type": "string",
+					"enum": ["Partial", "Full"]
+				}
+      ]
+		}
+  ],
+  "instructions": {"shortInstruction":"Draw a tight Cuboid", "fullInstruction":"<div>some html markup</div>"},
+	"auditLabelAttributeName": "pointcloud"
+}
