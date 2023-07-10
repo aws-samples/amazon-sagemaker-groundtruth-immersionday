@@ -1,7 +1,7 @@
 import random
 from datetime import datetime
 
-BYOM_AUTOANNOTATION_THRESHOLD = 0.70
+BYOM_AUTOANNOTATION_THRESHOLD = 0.5
 BLAZINGTEXT_AUTOANNOTATION_THRESHOLD = 0.5
 JOB_TYPE = "groundtruth/text-classification"
 
